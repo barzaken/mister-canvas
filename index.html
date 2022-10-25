@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Mister Canvas</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+
+        <div class="canvas-options">
+            <input type="color" onchange="onChangeColor(this.value)">
+            <select name="shapes" id="shapes" onchange="onChangeShape(this.value)">
+                <option value="line">Line</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+            </select>
+            <button onclick="onSaveCanvas()">Save</button>
+            <button onclick="onClearCanvas()">Clear</button>
+            <button onclick="uploadImg()">Upload</button>
+            <button onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</button>
+        </div>
+    
+        <div class="canvas-container">
+            <canvas id="my-canvas" onmousedown="onStartDraw(event)" onmousemove="draw(event)"
+                onmouseup="onEndDraw()"></canvas>
+        </div>
+
+
+    </div>
+    <script src="lib/hammer.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/upload.service.js"></script>
+</body>
+
+</html>
