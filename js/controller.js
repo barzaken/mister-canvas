@@ -19,7 +19,7 @@ function downloadImg(elLink) {
 }
 
 function onTouch() {
-    gCanvasTouch.on('pan', (ev) => {
+    gCanvasTouch.on('tap', (ev) => {
         console.log(ev)
         ev.preventDefault()
         gIsDrawing = true
