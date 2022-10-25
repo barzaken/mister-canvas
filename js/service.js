@@ -16,7 +16,7 @@ function onEndDraw(){
 
 function draw(ev,x,y) {
     if(!gIsDrawing) return
-
+    
     const offsetX = ev.offsetX || x
     const offsetY = ev.offsetY || y
     switch (gCurrShape) {

@@ -19,8 +19,7 @@ function downloadImg(elLink) {
 }
 
 function onTouch() {
-    gCanvasTouch.on('tap', (ev) => {
-        console.log(ev)
+    gCanvasTouch.on('swipe', (ev) => {
         ev.preventDefault()
         gIsDrawing = true
         draw(null, ev.center.x, ev.center.y)
